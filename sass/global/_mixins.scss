@@ -1,0 +1,49 @@
+@mixin button {
+  display: block;
+  color: #ffffff;
+  background-color: #16a085;
+  text-align: center;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 12px;
+  line-height: 48px;
+  border-radius: 2px;
+  border: 1px solid #16a085;
+  text-transform: uppercase;
+
+  @media (max-width: 745px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover {
+    color: #16a085;
+    background-color: #ffffff;
+  }
+}
+
+@mixin layout-inner ($width) {
+  position: relative;
+
+  @media (min-width: $width + 22px) {
+    margin: 0 auto;
+    width: $width;
+  }
+
+  @media (max-width: $width + 21px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@mixin layout ($width, $class:null) {
+  @if ($class == null) {
+    .layout {
+      @include layout-inner($width);
+    }
+  }
+  @else {
+    .layout.#{$class} {
+      @include layout-inner($width);
+    }
+  }
+}

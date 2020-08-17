@@ -1,0 +1,105 @@
+#community {
+  display: block;
+  padding-top: 118px;
+  padding-bottom: 96px;
+  background-color: #f5f6f7;
+
+  @media (max-width: 685px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: 685px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .tile {
+      display: block;
+      margin-right: 24px;
+      margin-bottom: 24px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+
+        @media (max-width: 1045px) {
+          margin-right: 24px;
+        }
+      }
+
+      &:nth-child(2n) {
+
+        @media (max-width: 1045px) {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(1n) {
+
+        @media (max-width: 685px) {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        display: block;
+        max-width: 370px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-basis: 236px;
+      flex-grow: 1;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 685px) {
+        flex-basis: auto;
+      }
+
+      img {
+        display: block;
+        height: 54px;
+        width: 58px;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        display: block;
+        color: #373737;
+        font-family: "Gotham Rounded", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        display: block;
+        width: 140px;
+        color: #373737;
+        font-family: "Gotham Rounded", sans-serif;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 500;
+      }
+    }
+  }
+}

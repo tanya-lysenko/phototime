@@ -1,0 +1,153 @@
+#header {
+  width: 100%;
+  min-height: 744px;
+  padding: 0 15px;
+  background-image: url(../images/fon.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  a.logo {
+    display: none;
+    height: 60px;
+    width: 54px;
+    margin: 0 auto 10px;
+
+    @media(max-width:711px) {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .top {
+    display: block;
+    padding: 14px 0;
+
+    nav {
+      display: block;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          display: block;
+          margin: 0 33px;
+
+          a {
+            display: block;
+            margin: 20px auto;
+            color: #ffffff;
+            font-family: "Gotham Rounded", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:hover {
+              text-shadow: 0 0 4px #000000;
+            }
+          }
+
+          &.logo {
+            display: flex;
+
+            @media(max-width:711px) {
+              display: none;
+            }
+
+            a {
+              display: block;
+
+              img {
+                display: block;
+                height: 60px;
+                width: 54px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    display: block;
+    max-width: 506px;
+
+    h1 {
+      display: block;
+      color: #ffffff;
+      font-family: "Gotham Rounded", sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    h2 {
+      display: block;
+      margin-bottom: 22px;
+      color: #ffffff;
+      font-family: "Gotham Rounded", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    a {
+      width: 170px;
+      margin: 0 auto;
+
+      @include button;
+    }
+  }
+
+  .bottom {
+    display: block;
+    padding: 22px 0;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        display: block;
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+          max-height: 26px;
+          max-width: 24px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

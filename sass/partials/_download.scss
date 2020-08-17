@@ -1,0 +1,107 @@
+#download {
+  display: block;
+  background-color: #f5f6f7;
+  padding: 90px 0 80px;
+
+  @media (max-width: 685px) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+
+  @include layout(810px);
+
+  h2 {
+    display: block;
+    color: #373737;
+    font-family: "Gotham Rounded", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    display: block;
+    margin-bottom: 30px;
+    color: #373737;
+    font-family: "Gotham Rounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    text-align: center;
+  }
+
+
+  @include layout(640px, flex-box);
+
+  .flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: 661px) {
+      flex-direction: column;
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 296px;
+      margin-bottom: 10px;
+
+      @media (max-width: 661px) {
+        width: 100%;
+      }
+
+      .text {
+        display: block;
+        flex-grow: 1;
+        height: 56px;
+        padding: 0 24px;
+        line-height: 56px;
+        background-color: #1abc9c;
+        color: #ffffff;
+        font-family: "Gotham Rounded", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .icon {
+        display: flex;
+        height: 56px;
+        width: 56px;
+        background-color: #16a085;
+        border-radius: 0 3px 3px 0;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+
+      &:hover {
+
+        .text {
+          background-color: #16a085;
+        }
+
+        .icon {
+          background-color: #1abc9c;
+        }
+      }
+    }
+  }
+}
