@@ -12,13 +12,17 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 639px) {
+    align-items: stretch;
+  }
+
   a.logo {
     display: none;
     height: 60px;
     width: 54px;
     margin: 0 auto 10px;
 
-    @media(max-width:711px) {
+    @media(max-width: 711px) {
       display: block;
     }
 
@@ -36,12 +40,39 @@
     nav {
       display: block;
 
+      .menu {
+        display: none;
+
+        @media (max-width: 639px) {
+          display: inline-block;
+          color: #ffffff;
+          font-family: "Gotham Rounded", sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 56px;
+          cursor: pointer;
+
+          &:hover {
+            text-shadow: 0 0 4px #000000;
+          }
+        }
+      }
+
       ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 639px) {
+          flex-direction: column;
+          display: none;
+
+          &.open {
+            display: flex;
+          }
+        }
 
         li {
           display: block;
@@ -64,7 +95,7 @@
           &.logo {
             display: flex;
 
-            @media(max-width:711px) {
+            @media(max-width: 711px) {
               display: none;
             }
 
@@ -86,6 +117,7 @@
   .middle {
     display: block;
     max-width: 506px;
+    margin: 0 auto;
 
     h1 {
       display: block;
