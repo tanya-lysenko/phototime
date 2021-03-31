@@ -1,5 +1,10 @@
 document.addEventListener('click', function (e) {
-    if (e.target.href === '#' || e.target.closest(`[href="#"]`)) e.preventDefault();
+    const condition1 = e.target.href === '#';
+    const condition2 = e.target.closest(`[href="#"]`);
+
+    if (condition1 || condition2) {
+        e.preventDefault();
+    }
 });
 
 const form = document.querySelector(`[name="your-email-form"]`);
@@ -10,7 +15,11 @@ form.addEventListener('submit', function (e) {
 
     const value = input.value.trim();
 
-    if (value.indexOf('@') > 0 && value.indexOf('.') > 0 && value.length > 4) {
+    const condition1 = value.indexOf('@') > 0;
+    const condition2 = value.indexOf('.') > 0;
+    const condition3 = value.length > 4;
+
+    if (condition1 && condition2 && condition3) {
         input.style.boxShadow = 'inset 0px 0px 0px 5px #0f0';
     } else {
         input.style.boxShadow = 'inset 0px 0px 0px 5px #f00';
